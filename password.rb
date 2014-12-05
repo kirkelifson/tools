@@ -3,7 +3,7 @@ require 'optparse'
 
 alpha = *('a'..'z'), *('A'..'Z')
 num   = *(0..9)
-sym   = '!@#$%^&*()_-+=/,.'.split
+sym   = '!@#$%^&*()_-+=/,.'.split ''
 keyspace = []
 
 OptionParser.new do |opts|
