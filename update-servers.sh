@@ -1,6 +1,6 @@
-echo "\n[+] Connecting to andromeda..."
-ssh -o ConnectTimeout=5 -t andromeda "./update.sh"
-echo "\n[+] Connecting to apollo..."
-ssh -o ConnectTimeout=5 -t apollo "./update.sh"
-echo "\n[+] Connecting to pythagoras..."
-ssh -o ConnectTimeout=5 -t pythagoras "./update.sh"
+servers=(andromeda apollo pythagoras)
+for server in $servers
+do
+    echo "\n[+] Connecting to $server..."
+    ssh -o ConnectTimeout=5 -t $server "./update.sh"
+done
