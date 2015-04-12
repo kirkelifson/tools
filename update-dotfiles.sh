@@ -1,4 +1,4 @@
-servers=(andromeda apollo pythagoras euclid)
+servers=(andromeda apollo euclid)
 for server in ${servers[@]}
 do
     echo "\n[+] Connecting to $server..."
