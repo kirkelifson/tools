@@ -1,3 +1,5 @@
+#!/bin/bash
+
 servers=(andromeda apollo euclid gemini)
 for server in ${servers[@]}
 do
