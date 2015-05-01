@@ -3,6 +3,6 @@
 servers=(andromeda apollo euclid gemini)
 for server in ${servers[@]}
 do
-    echo -ne "\n[+] Connecting to $server..."
+    echo -e "\n[+] Connecting to $server..."
     ssh -o ConnectTimeout=5 -t $server "./update.sh"
 done
