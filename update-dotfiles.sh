@@ -1,6 +1,6 @@
 #!/bin/bash
 
-servers=(andromeda apollo euclid gemini centauri hlds seedbox)
+servers=(andromeda apollo euclid centauri hlds seedbox)
 for server in ${servers[@]}
 do
     echo -e "\n[+] Connecting to $server..."
