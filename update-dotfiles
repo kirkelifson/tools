@@ -4,5 +4,10 @@ servers=(andromeda apollo euclid centauri hlds seedbox)
 for server in ${servers[@]}
 do
     echo -e "\n[+] Connecting to $server..."
-    ssh -o ConnectTimeout=5 -t $server "cd dot-files; git pull; ./install.sh; sudo -- sh -c 'cd ~/dot-files; git pull; ./install.sh'"
+    if [[ $server == "hlds" || $server == "seedbox" ]];
+    then
+      ssh -o ConnectTimeout=5 -t $server "cd dot-files; git pull; ./install.sh;"
+    else
+      ssh -o ConnectTimeout=5 -t $server "cd dot-files; git pull; ./install.sh; sudo -- sh -c 'cd ~/dot-files; git pull; ./install.sh'"
+    fi
 done
