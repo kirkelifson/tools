@@ -6,8 +6,8 @@ do
     echo -e "\n[+] Connecting to $server..."
     if [[ $server == "hlds" || $server == "seedbox" ]];
     then
-      ssh -o ConnectTimeout=5 -t $server "cd dot-files; git pull; ./install.sh;"
+      ssh -o ConnectTimeout=5 -t $server "cd dot-files; git pull; ./install;"
     else
-      ssh -o ConnectTimeout=5 -t $server "cd dot-files; git pull; ./install.sh; sudo -- sh -c 'cd ~/dot-files; git pull; ./install.sh'"
+      ssh -o ConnectTimeout=5 -t $server "cd dot-files; git pull; ./install; sudo -- sh -c 'cd ~/dot-files; git pull; ./install'"
     fi
 done
