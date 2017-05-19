@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/usr/bin/env zsh
 servers=(andromeda apollo centauri hlds seedbox)
 for server in ${servers[@]}
 do

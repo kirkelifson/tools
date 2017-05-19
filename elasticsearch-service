@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 if [[ $1 != "" ]];
 then
     brew services $1 elasticsearch
