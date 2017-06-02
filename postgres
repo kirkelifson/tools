@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-if [[ $1 != "" ]];
+if [[ $1 != "" && ($1 == "start" || $1 == "stop") ]];
 then
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log $1
 else
