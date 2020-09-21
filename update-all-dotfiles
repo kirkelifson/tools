@@ -1,7 +1,0 @@
-#!/usr/bin/env zsh
-servers=(andromeda centauri)
-for server in ${servers[@]}
-do
-  echo -e "\n[+] Connecting to $server..."
-  ssh -o ConnectTimeout=5 -t $server "cd dot-files; git pull; ./install; sudo -- sh -c 'cd ~/dot-files; git pull; ./install'"
-done
